@@ -7,10 +7,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { SocialMediaModule } from './social-media/social-media.module';
+import { DocumentListComponent } from './document/components/document-list/document-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DocumentListComponent
   ],
   imports: [
     BrowserModule,
