@@ -1,0 +1,26 @@
+
+<div class="page">
+    <nav *ngIf="isLoaded">
+        <div class="buttons-container">
+            <button (click)="prevPage()" [disabled]="page === 1" class="previous">Prec.</button>
+            <button (click)="nextPage()" [disabled]="page === totalPages" class="next">Suiv.</button>
+        </div>
+        <span>{{ page }} / {{ totalPages }}</span>
+    </nav>
+    <pdf-viewer [src]="pdfSrc"
+                [original-size]="true"
+                [render-text]="true"
+                [rotation]="0"
+                [show-all]="false"
+                [fit-to-page]="true"
+                [zoom]="1"
+                [zoom-scale]="'page-width'"
+                [stick-to-page]="true"
+                [external-link-target]="'blank'"
+                [autoresize]="true"
+                [show-borders]="false"
+                class="pdf-viewer"
+                [page]="page"
+                (after-load-complete)="afterLoadComplete($event)"
+    ></pdf-viewer>
+</div>

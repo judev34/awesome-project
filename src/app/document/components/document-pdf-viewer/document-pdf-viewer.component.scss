@@ -1,0 +1,14 @@
+pdf-viewer {
+    height: 100vh;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    span {
+        color: white;
+        font-size: 16px;
+    }
+}
