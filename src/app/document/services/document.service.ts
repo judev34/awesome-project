@@ -11,7 +11,7 @@ export class DocumentService {
 
   constructor(private http: HttpClient) { }
 
-  getDocuments(): Observable<Document[]> {
+  getAllDocuments(): Observable<Document[]> {
     return this.http.get<Document[]>(`${environment.apiUrlLaravel}/documents`)
   }
 }

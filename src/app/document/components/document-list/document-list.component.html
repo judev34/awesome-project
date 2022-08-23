@@ -1,1 +1,3 @@
-<p>document-list works!</p>
+
+<h2>Documents</h2>
+<app-document-list-item *ngFor="let document of documents$ | async" [document]="document" ></app-document-list-item>
