@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Document } from '../../models/document.model';
 
 @Component({
@@ -10,9 +11,13 @@ export class DocumentListItemComponent implements OnInit {
 
   @Input() document!: Document
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  openPdfViewer(): void {
+    this.router.navigateByUrl(`/documents/${this.document.id}`);
   }
 
 }
