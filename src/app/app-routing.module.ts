@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: 'social-media', loadChildren: () => import('./social-media/social-media.module').then(m => m.SocialMediaModule) },
+  { path: 'steam', loadChildren: () => import('./steam/steam.module').then(m => m.SteamModule) },
+
   { path: '**', redirectTo: 'social-media' }
 ];
 

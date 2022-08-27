@@ -7,12 +7,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { SocialMediaModule } from './social-media/social-media.module';
-import { SteamComponent } from './steam/components/steam/steam.component';
+import { SteamModule } from './steam/steam.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SteamComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +19,8 @@ import { SteamComponent } from './steam/components/steam/steam.component';
     BrowserAnimationsModule,
     CoreModule,
     SharedModule,
-    SocialMediaModule
+    SocialMediaModule,
+    SteamModule
   ],
   providers: [],
   bootstrap: [AppComponent]
